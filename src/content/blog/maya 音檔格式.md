@@ -1,5 +1,5 @@
 ---
-title: 'maya 音檔格式'
+title: '音檔格式'
 description: 'maya音檔無法讀取'
 pubDate: '2026/7/4'
 tags:
@@ -8,9 +8,9 @@ tags:
 ---
 
 ### 確認音檔格式
-44.1kHz 
-16 bit<br>
-wav檔
+`44.1kHz` 
+`16 bit`
+`wav檔`
 
 ***
 <br>
