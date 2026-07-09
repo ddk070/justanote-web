@@ -1,5 +1,4 @@
 ---
-//import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
 import Layout from '../layouts/BlogPost.astro';
 ---
 
@@ -10,7 +9,7 @@ import Layout from '../layouts/BlogPost.astro';
 
 >
 	<p>
-		泥好，這裡是我的筆記庫，將不定期更新 :D<br>
+		泥好，這裡是我的筆記庫，將不定期<a href="/update/">更新</a> :D<br>
 		這些筆記整理了我學習過程中的一些紀錄，
 		希望能為正在面對相同問題的你帶來一些幫助。<br>
 		如果內容有任何錯誤、疏漏，或有更好的建議，歡迎寄信到我的信箱與我交流。<br>
@@ -23,3 +22,11 @@ import Layout from '../layouts/BlogPost.astro';
 	</p>
 	
 </Layout>
+
+<style>
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+</style>

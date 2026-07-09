@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+import { Content as Daily } from '../content/update/daily.md';
+
+---
+
+<Layout
+	title="網站日記"
+	description="網站更新日記"
+	pubDate={new Date('2026/7/4')}
+>
+	<Daily />
+	
+</Layout>

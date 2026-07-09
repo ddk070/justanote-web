@@ -1,13 +1,12 @@
 ---
-title: 'CopyUV腳本'
-description: 'CopyUV腳本'
-pubDate: '2026/7/6'
-
+title: CopyUV腳本
+description: Maya model腳本
+pubDate: 2026/7/6
 tags:
-    - maya
-    - CopyUV
-    - 腳本推薦
-    - mel
+  - maya
+  - CopyUV
+  - mel
+  - 腳本
 ---
 
 

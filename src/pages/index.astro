@@ -10,18 +10,91 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 <html lang="zh-TW">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.tree {
+			list-style: none;
+			padding-left: 1rem;
+			}
+			.intree {
+			list-style: none;
+			margin-left: 2.5rem;
+			}
+			.tree > li {
+			font-size: 2rem;
+			font-weight: bold;
+			}
+
+			.tree > li > ul {
+			font-size: 1.3rem;
+			font-weight: normal;
+			}
+			.tree ul {
+			list-style: none;
+			padding-left: 1.5rem;
+			position: relative;
+			}
+
+			.tree li {
+			position: relative;
+			padding: 0.3rem 0;
+			}
+
+			/* 垂直線 */
+			.tree ul::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			border-left: 1px solid #999;
+			}
+
+			/* 橫線 */
+			.tree ul li::before {
+			content: "";
+			position: absolute;
+			left: -1.5rem;
+			top: 1rem;
+			width: 1rem;
+			border-top: 1px solid #999;
+			}
+			
+			.tree li:last-child::after {
+			content: "";
+			position: absolute;
+			left: -1.5rem;
+			top: 1rem;
+			bottom: 0;
+			border-left: 1px solid white;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h2>MAYA</h2>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
+			<h4>『 用於存放MAYA筆記 』</h4>
 			<hr>
-			
+
+			<section>
+				<h3>筆記庫目錄</h3>
+				<ul class="tree">
+					<li>maya
+						<ul class="intree">
+						<li>基礎</li>
+						<li>Model</li>
+						<li>Rigging</li>
+						<li>Animation</li>
+						<li>腳本</li>
+						<li>Rendering</li>
+						<li>相關資源</li>
+						</ul>
+					</li>
+				</ul>
+
+
+
+			</section>
+
 
 		</main>
 		<Footer />

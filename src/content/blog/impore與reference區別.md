@@ -31,6 +31,7 @@ import.ma讀取Model.ma的所有物件，並**生成**與Model.ma相同的所有
 reference.ma讀取Model.ma的所有物件，並**顯示**在reference.ma上。<br>
 
 * 兩個檔案的物件**有牽連**（僅Model.ma的物件牽動reference.ma）
+* 也可在reference.ma檔修改物件，但Model.ma的物件不會有任何影響
 * 檔案小
 
 ![reference](../../assets/reference.jpg)
