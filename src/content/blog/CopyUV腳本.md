@@ -2,6 +2,7 @@
 title: CopyUV腳本
 description: Maya model腳本
 pubDate: 2026/7/6
+outline: '腳本'
 tags:
   - maya
   - CopyUV

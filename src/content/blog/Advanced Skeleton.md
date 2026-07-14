@@ -2,6 +2,7 @@
 title: advanced skeleton
 description: Maya advanced skeleton
 pubDate: 2026/7/8
+outline: '腳本'
 tags:
   - maya
   - advancedskeleton

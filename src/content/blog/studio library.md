@@ -1,7 +1,8 @@
 ---
-title: studiolibrary
+title: studio library
 description: Maya studiolibrary
 pubDate: 2026/7/8
+outline: '腳本'
 tags:
   - maya
   - studiolibrary

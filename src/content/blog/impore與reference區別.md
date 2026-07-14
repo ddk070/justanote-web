@@ -2,6 +2,7 @@
 title: 'import 與 reference 區別'
 description: 'import與reference區別'
 pubDate: '2026/7/6'
+outline: '基礎'
 tags:
     - maya
     - import

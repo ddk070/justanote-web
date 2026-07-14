@@ -2,6 +2,7 @@
 title: mgear
 description: Maya mgaer
 pubDate: 2026/7/8
+outline: '腳本'
 tags:
   - maya
   - mgear
