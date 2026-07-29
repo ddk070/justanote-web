@@ -1,0 +1,64 @@
+---
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const tagCounts = allPosts
+  .flatMap((post) => post.data.tags ?? []) 
+  .reduce<Record<string, number>>((acc, tag) => {
+    if (!tag) return acc;
+    acc[tag] = (acc[tag] || 0) + 1;
+    return acc;
+  }, {});
+
+const sortedTags = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]);
+const { variant = "default" } = Astro.props;
+---
+
+<div class="tag-container">
+  <div class={`tags ${variant}`}>
+  <h2>標籤 ({sortedTags.length})</h2>
+  </div>
+  <ul class="tag-list">
+    {sortedTags.map(([tag, count]) => (
+      <li>
+        <a href={`/tags/${tag}`}>
+          <span class="tag-name">#{tag}</span>
+          <span class="tag-count">({count})</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+  
+</div>
+
+<style>
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    
+  }
+  .tag-list a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    background-color: #f3f4f6;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #374151;
+    font-size: 0.9rem;
+  }
+  .tag-list a:hover {
+    background-color: #e5e7eb;
+  }
+  .tag-count {
+    color: #6b7280;
+    font-size: 0.8rem;
+  }
+  .tags.page {
+    font-size: 1rem;
+  }
+</style>

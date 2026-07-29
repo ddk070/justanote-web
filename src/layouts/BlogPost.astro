@@ -1,14 +1,23 @@
 ---
 import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import Tags from '../components/Tags.astro'
+import { render, type CollectionEntry } from 'astro:content';
+import Toc from '../components/Toc.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { post } = Astro.props as Props;
+
+const { Content, headings } = await render(post);
+const { title, description, pubDate, updatedDate, heroImage } = post.data; 
+
+
 ---
 
 <html lang="zh-TW">
@@ -57,31 +66,215 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 	<body>
 		<Header />
-		<main>
-			<article>
-				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
+		<main >
+			<div class="three-column-layout ">
+				<!-- 左邊欄 -->
+				<aside class="sidebar desktop-toc">
+				<div class="nav-card ">
+					<h4>目錄</h4>
+					<Toc headings={headings} />
 				</div>
-				<div class="prose">
-					<div class="title">
-						<h1>{title}</h1>
-						
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
-						
+				</aside>
+
+				<!-- 中間欄 -->
+				<article class="center-content">
+					<div class="hero-image">
+						{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
 					</div>
-					<slot />
+					<div class="prose">
+						<div class="title">
+							<h1>{title}</h1>
+							
+							<div class="date">
+								<FormattedDate date={pubDate} />
+									<aside class="sidebar mobile-toc">
+										<div class="nav-card">
+											<h4>目錄</h4>
+											<Toc headings={headings} />
+										</div>
+									</aside>
+								{
+									updatedDate && (
+										<div class="last-updated-on">
+											Last updated on <FormattedDate date={updatedDate} />
+										</div>
+									)
+								}
+							</div>
+							
+						</div>
+						<div class="mk">
+							<Content />
+						</div>
+					</div>
+				</article>
+
+				<!-- 右邊攔 -->
+				<aside class="sidebar">
+    			<div class="sticky-card">
+					<Tags variant="page"/>
 				</div>
-			</article>
+  				</aside>	
+			</div>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	
+	/* 目錄 */
+	.sidebar{
+		background-color: #cfdfe4; 
+		padding: 2rem ;
+		border-radius: 1rem;
+	}
+	
+	.desktop-toc {
+		display: none;
+	}
+	.center-content{
+		margin-bottom: 2rem;
+	}
+	.mobile-toc {
+		display: block;
+		background-color: #cfdfe4; 
+		margin-top: 2rem;
+		padding: 2rem;
+		border-radius: 1rem;
+		text-align: left;
+	}
+	.nav-card ul {
+	list-style: none;
+	padding: 0;
+	margin-left: 1rem;
+	}
+	.nav-card li {
+	margin-bottom: 0.8rem;
+	}
+	.nav-card a {
+	color: #000000;
+	text-decoration: none;
+	transition: color 0.2s;
+	}
+	.nav-card a:hover {
+	color: #3182ce; /* 滑鼠移上去變藍色 */
+	}
+
+	/* markdown */
+	.mk :global(h1) {
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin: 2rem 0;
+	}
+	.mk :global(h2) {
+	font-size: 2rem;
+	margin: 1.5rem 0;
+	}
+	.mk :global(h3) {
+	font-size: 1.8rem;
+	font-weight: bold;
+	margin: 1.5rem 0;
+	}
+	.mk :global(h4) {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 1.5rem 0;
+	}
+	.mk :global(h5) {
+	font-size: 1.45rem;
+	font-weight: bold;
+	margin: 1.5rem 0;
+	}
+	.mk :global(hr) {
+	border: none;
+	border-top: 1px solid rgb(var(--gray-light));
+	margin: 1.5rem 0;
+	}
+	.mk :global(p) {
+	margin-bottom: 1.25rem;
+	margin-left: 1rem;
+	font-size: 1.25rem;
+	}
+	.mk :global(ul li) {
+	font-size: 1.25rem;
+	line-height: 2;
+	}
+	.mk :global(ol li) {
+	font-size: 1.25rem;
+	line-height: 2;
+	}
+	.mk :global(img) {
+	margin: auto;
+	margin-bottom: 1.5rem;
+	}
+
+	@media (min-width: 1024px) {
+		main{
+			width: 100%;
+			padding: 0;
+		}
+		.desktop-toc {
+			display: block; /* 電腦版：讓側邊欄目錄顯示出來 */
+		}
+
+		.mobile-toc {
+			display: none; /* 電腦版：隱藏內文裡的目錄，避免重複顯示！ */
+		}
+		/* 外層容器：分成 3 欄 */
+		.three-column-layout {
+		display: grid;
+		grid-template-columns: 1fr 3.5fr 1fr;
+		gap: 0; /* 👈 如果不想要欄位之間有縫隙，可以設為 0 */
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		}
+
+		/* 左、右側欄的基礎卡片樣式 */
+		.nav-card, .sticky-card {
+		position: sticky;
+		top: 7rem;
+		}
+
+		.center-content{
+			margin-top: 1rem;
+		}
+		.sidebar{
+			padding: 3rem 2rem 2rem;
+		}
+		/* 簡單調整左側連結清單樣式 */
+		
+		/* markdown */
+	.mk :global(h1) {
+	font-size: 2.85rem;
+	margin: 3rem 0;
+	}
+	.mk :global(h2) {
+	font-size: 2.5rem;
+	margin: 3rem 0;
+	}
+	.mk :global(h3) {
+	font-size: 2.1rem;
+	margin: 3rem 0;
+	}
+	.mk :global(h4) {
+	font-size: 1.8rem;
+	margin: 3rem 0;
+	}
+	.mk :global(h5) {
+	font-size: 1.5rem;
+	margin: 3rem 0;
+	}
+	.mk :global(p) {
+	font-size: 1.5rem;
+	}
+	.mk :global(ul li) {
+	font-size: 1.5rem;
+	}
+	.mk :global(ol li) {
+	font-size: 1.5rem;
+	}
+	}
+</style>
+

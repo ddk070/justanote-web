@@ -1,16 +1,15 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import Web from '../layouts/forweb.astro';
+
 ---
 
-<Layout
-	title="關於筆記庫"
-	description="關於頁面"
-	pubDate={new Date('2026/7/4')}
-
->
+<Web title="關於筆記庫" description="筆記庫網站的關於頁面" >
+	<h4 id="notemean">網站定位： 『 存放MAYA學習筆記 』</h4>
+	
 	<p>
 		泥好，這裡是我的筆記庫，將不定期<a href="/update/">更新</a> :D<br>
 		這些筆記整理了我學習過程中的一些紀錄，
+		筆記內容將持續修訂與補充中，架構與內文可能會隨時調整。<br>
 		希望能為正在面對相同問題的你帶來一些幫助。<br>
 		如果內容有任何錯誤、疏漏，或有更好的建議，歡迎寄信到我的信箱與我交流。<br>
 		我也還在持續學習中，每一次討論與指正都是寶貴的收穫，謝謝大家。
@@ -20,13 +19,17 @@ import Layout from '../layouts/BlogPost.astro';
 	<p>
 		信箱：fxuan070@gmail.com
 	</p>
-	
-</Layout>
+
+</Web> 
 
 <style>
 	a {
-		color: inherit;
-		text-decoration: none;
+	text-decoration: none; 
+	color: inherit; 
 	}
-
+	#notemean {
+		color: #6c8cbd;
+		text-align: center;
+	}
+	
 </style>

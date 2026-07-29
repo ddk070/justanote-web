@@ -1,0 +1,112 @@
+---
+// src/components/Toc.astro
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  headings: Heading[];
+}
+
+const { headings = [] } = Astro.props;
+---
+
+<nav class="toc">
+  <ul>
+    {
+      headings.map((heading: Heading) => {
+        // 每深一層，往右縮進 12px
+        const indent = (heading.depth - 1) * 12;
+        
+        return (
+          <li style={{ paddingLeft: `${indent}px` }}>
+            {/* 加上 data-slug 方便 JS 精準查找，避開 CSS Selector 轉譯問題 */}
+            <a href={`#${heading.slug}`} class="toc-link" data-slug={heading.slug}>
+              {heading.text}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>
+
+<style>
+  .toc {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+
+  .toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+
+  .toc li {
+    margin-bottom: 4px;
+    line-height: 1.5;
+  }
+
+  .toc-link {
+    display: block;
+    color: #47475a;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 4px 0;
+    transition: color 0.15s ease, font-weight 0.15s ease;
+    word-break: break-word;
+  }
+
+  .toc-link:hover {
+    color: #003ab8; /* 藍 600 */
+  }
+
+  /* 正在閱讀中的高亮狀態 */
+  .toc-link.active {
+    color: #2563eb; /* 藍 600 */
+    font-weight: 600;
+  }
+</style>
+
+<script>
+  function setupTocObserver() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          if (!id) return;
+
+          // 1. 先清除所有 TOC 連結的 active 狀態
+          document.querySelectorAll('.toc .toc-link').forEach((link) => {
+            link.classList.remove('active');
+          });
+
+          // 2. 透過 data-slug 屬性精準匹配並高亮當前標題
+          const activeLink = document.querySelector(`.toc .toc-link[data-slug="${CSS.escape(id)}"]`);
+          if (activeLink) {
+            activeLink.classList.add('active');
+          }
+        }
+      });
+    }, { 
+      // rootMargin 決定觸發判定區域：上方留 -80px (避開 Header)，下方留 -60% 視窗長度
+      rootMargin: '-80px 0px -60% 0px',
+      threshold: 1.0
+    });
+
+    // 監聽文章內容區域裡所有的標題
+    const headings = document.querySelectorAll('article h1, article h2, article h3, article h4, article h5, article h6');
+    headings.forEach((heading) => observer.observe(heading));
+  }
+
+  // 初次載入執行
+  setupTocObserver();
+
+  // 如果你有使用 Astro 的 Client-side Routing (View Transitions)，跳頁時自動重新綁定
+  document.addEventListener('astro:page-load', setupTocObserver);
+</script>

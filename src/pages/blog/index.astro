@@ -10,6 +10,18 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+
+
+
+const tagsCount: Record<string, number> = {};
+
+posts.forEach(post => {
+    const tags: string[] = post.data.tags || [];
+
+    tags.forEach(name => {
+        tagsCount[name] = (tagsCount[name] || 0) + 1;
+    });
+});
 ---
 
 <!doctype html>
@@ -18,70 +30,99 @@ const posts = (await getCollection('blog')).sort(
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
 			main {
-				width: 960px;
+				width: 100%;             /* 手機版佔滿螢幕 */
+				max-width: 100%;
+				padding: 1rem;           /* 左右留白呼吸空間 */
+				box-sizing: border-box;
+				margin-top: 1rem;
 			}
+
 			ul {
 				display: flex;
 				flex-wrap: wrap;
-				gap: 2rem;
+				gap: 10px;               /* 手機版間距稍小一點點 */
 				list-style-type: none;
 				margin: 0;
 				padding: 0;
 			}
+
 			ul li {
-				width: calc(50% - 1rem);
+				width: 100%;             /* 手機版一律單欄 (100% 寬) */
+				border-radius: 0.5rem;
+				padding: 0; 
+				background: #e6ecf5;
+				text-align: center;
+				box-sizing: border-box;
+				transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+				overflow: hidden; 
 			}
+
+			ul li:hover {
+				transform: translateY(-4px);                  /* 整張卡片向上飄浮 4px */
+				box-shadow: 0 8px 20px rgba(180, 180, 180, 0.1);    /* 加上立體陰影 */
+				background: #dbe4f0;                         /* 背景顏色稍微加深，增加互動感 */
+			}   
+
 			ul li * {
 				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
-			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
 			}
 			ul li a {
 				display: block;
+				width: 100%;
+				height: 100%;
+				padding: 1.5rem 1rem 0.6rem; /* 👈 把 padding 移到這裡！點擊範圍瞬間變全滿 */
+				box-sizing: border-box;
 			}
 			.title {
 				margin: 0;
 				color: rgb(var(--black));
-				line-height: 1;
+				line-height: 1.2;        /* 手機版行高稍寬避免壓迫 */
+				font-size: 1.35rem;      /* 一般卡片標題手機版尺寸 */
+			}
+			ul li:first-child .title {
+				font-size: 1.75rem;      /* 手機版第一篇大標題縮小一點，避免折太多行 */
 			}
 			.date {
 				margin: 0;
 				color: rgb(var(--gray));
 			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
+			.count {
+				color: #7c7c7c;
 			}
 			ul a:hover img {
 				box-shadow: var(--box-shadow);
 			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
+			@media (min-width: 1024px) {
+				main {
+					width: 70%;
+					padding: 0;
+					margin: 3rem auto;          /* 恢復原本電腦版的無外襯 */
 				}
+				ul {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 20px;
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+				}	
 				ul li {
-					width: 100%;
-					text-align: center;
+					width: calc(50% - 1rem);
+					padding: 2rem 2.5rem 1.5rem;
+					border-radius: 2rem;
 				}
 				ul li:first-child {
-					margin-bottom: 0;
+					width: 100%;
+					margin-bottom: 1rem;
 				}
+
 				ul li:first-child .title {
-					font-size: 1.563em;
+					font-size: 2.369rem;
+				}
+
+				.title {
+					line-height: 1;
+					font-size: 2.369rem;
 				}
 			}
 		</style>
@@ -91,7 +132,8 @@ const posts = (await getCollection('blog')).sort(
 		<main>
 			<section>
 				<h1>MAYA 筆記</h1>
-				<hr><br>
+				<p class="count">目前筆記數量 ： <span> {tagsCount["maya"] ?? 0}</span></p>
+				<hr>
 				<ul>
 					{
 						posts.map((post) => (
@@ -100,7 +142,7 @@ const posts = (await getCollection('blog')).sort(
 									{post.data.heroImage && (
 										<Image width={720} height={360} src={post.data.heroImage} alt="" />
 									)}
-									<h4 class="title">{post.data.title}</h4>
+									<h1 class="title">{post.data.title}</h1>
 									<p class="date">
 										<FormattedDate date={post.data.pubDate} />
 									</p>

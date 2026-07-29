@@ -1,0 +1,175 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('blog');
+
+  const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())].filter(Boolean);
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) => post.data.tags && post.data.tags.includes(tag));
+    
+    return {
+      params: { tag: tag },            
+      props: { posts: filteredPosts }, 
+    }; 
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+
+//const { variant = "default" } =Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <BaseHead title={`${SITE_TITLE} - #${tag}`} description={SITE_DESCRIPTION} />
+</head>
+<body>
+  <Header />
+  <main >
+    <header>
+      <h1><span class="tag-title">#{tag} ({posts.length})</span></h1>
+    </header>
+    <hr>
+    <ul class="post-list">
+      {posts.map((post) => (
+        <li class="card-item">
+          <a href={`/blog/${post.id}`} class="post-link card-content">
+            <span class="post-title">{post.data.title}</span>
+            <span class="post-date"><FormattedDate date={post.data.pubDate} /></span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </main>
+  <Footer />
+</body>
+</html>
+
+<style>
+  main {
+	width: calc(100% - 2em);
+	max-width: 90%;
+	margin: 1.5rem auto;
+  }
+  
+  .back-link {
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  .back-link:hover {
+    color: #111827;
+  }
+  .tag-title {
+    color: #000;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    padding: 1rem ;
+    background-color: #e3e4e6;
+    border-radius: 5rem;
+
+  }
+  .post-title {
+    color: #000;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #1f2937;
+    font-weight: 700;
+  }
+  .post-date {
+    color: #9499a7;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+  }
+  .post-list {
+    list-style: none;
+    padding: 0.75rem 0;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr; /* 手機版一排一個 */
+    gap: 15px; /* 手機版間距稍縮小，釋放畫面空間 */
+  }
+  /* 3. 卡片外殼：保留了你原本喜歡的 #c8e5eb 粉藍色背景，並加上圓角與滑過特效 */
+  .card-item {
+    display: flex;
+    background: #c8e5eb;
+    border-radius: 1rem; /* 保留你原本的 1rem 圓角 */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    overflow: hidden;
+  }
+
+  /* 滑鼠懸停效果：卡片微微飄起、陰影變深、背景顏色稍微變亮 */
+  .card-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    background: #b6de structure; /* 你可以自由微調滑過時的背景色，這裡稍微亮一點點 */
+    background-color: #d5eff3; 
+  }
+
+  /* 4. 卡片內容連結區：讓整張卡片都可以被點擊 */
+  .post-link.card-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem; /* 控制卡片內部的留白 */
+    text-decoration: none;
+    color: #1f2937;
+    text-align: left;
+  }
+
+  @media (min-width: 1024px) {
+    main {
+    max-width: 60%;
+    }
+    .tag-title {
+    color: #000;
+    font-size: 3rem;
+    margin: 1rem 0;
+    padding: 1rem ;
+    background-color: #e3e4e6;
+    border-radius: 5rem;
+
+  }
+  .back-link {
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  .post-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #1f2937;
+  }
+  .post-date {
+    color: #9499a7;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+  }
+   /* 2. 核心修改：將列表轉為 Grid 網格佈局（一排兩個） */
+  .post-list {
+    list-style: none;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 一排平分兩個 */
+    gap: 20px; /* 卡片與卡片之間的距離 */
+  }
+  }
+
+  
+</style>

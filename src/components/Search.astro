@@ -1,0 +1,129 @@
+---
+---
+
+<!-- Pagefind 搜尋框會掛載到這個 div -->
+<div id="search"></div>
+
+<!-- 載入 Pagefind 的 CSS 與 JS -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+<script src="/pagefind/pagefind-ui.js" is:inline></script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    // @ts-ignore
+    new PagefindUI({ 
+      element: "#search", 
+      showSubResults: true,
+      showImages: false 
+    });
+  });
+</script>
+
+<style>
+  :root {
+    --pagefind-ui-primary: #3b82f6;
+    --pagefind-ui-text: #1f2937;
+    --pagefind-ui-background: #ffffff;
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 1rem
+  }
+  #search {
+    margin:2rem 0;
+    
+  }
+
+  
+</style>
+
+<style is:global>
+  /* 1. 隱藏預設的縮圖（如果不想要圖片破壞排版） */
+  .pagefind-ui .pagefind-ui__result-thumb {
+    display: none !important;
+  }
+  .pagefind-ui .pagefind-ui__search-clear {
+    font-size: 0.925rem !important;
+    color: #7d8391 !important;
+  }
+
+  /* 2. 搜尋結果卡片：調整邊界與間距 */
+  .pagefind-ui .pagefind-ui__result {
+    padding: 1.25rem 0 !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important; /* 改成直向排列：標題在上、內文在下 */
+    gap: 0.4rem !important;
+   
+  }
+
+  /* 3. 文章標題列 */
+  .pagefind-ui .pagefind-ui__result-title {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+  }
+
+  .pagefind-ui .pagefind-ui__result-link {
+    color: #2f3542 !important; /* 標題連結顏色 */
+    text-decoration: none !important;
+
+  }
+
+  /* 4. 文章內文摘要（Excerpt） */
+  .pagefind-ui .pagefind-ui__result-excerpt {
+    font-size: 0.925rem !important;
+    line-height: 1.6 !important;
+    color: #717b8a !important; /* 暗灰字體，增加對比 */
+    margin: 0 !important;
+  }
+
+  /* 5. 搜尋關鍵字的高亮標示 */
+  .pagefind-ui mark {
+    background-color: #fff4a2 !important; /* 柔和黃色高亮 */
+    color: #854d0e !important;
+    padding: 1px 4px !important;
+    border-radius: 3px !important;
+    font-weight: 600 !important;
+  }
+
+  /* 6. 最下方的「載入更多」按鈕 */
+  .pagefind-ui .pagefind-ui__button {
+    margin-top: 1.5rem !important;
+    background-color: #f3f4f6 !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 6px !important;
+    padding: 0.6rem 1.2rem 2rem!important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    font-size: 0.925rem !important;
+  }
+
+  /* 電腦 */
+  @media (min-width: 1024px) {
+  
+
+    .pagefind-ui .pagefind-ui__result-title {
+    font-size: 2rem !important;
+    }
+    .pagefind-ui .pagefind-ui__result-excerpt {
+    font-size: 1.25rem !important;
+    line-height: 2 !important;
+
+  }
+  
+    .pagefind-ui .pagefind-ui__result-link:hover {
+      color: #1d4ed8 !important;
+      text-decoration: underline !important;
+    }
+    .pagefind-ui .pagefind-ui__button {
+      font-size: 1.5rem !important;
+    padding: 0.5rem 1.2rem 3rem!important;
+
+    }
+    #search {
+    margin:3rem 0;
+    
+  }
+  }
+
+</style>

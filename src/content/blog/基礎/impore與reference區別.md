@@ -5,29 +5,30 @@ pubDate: '2026/7/6'
 outline: '基礎'
 tags:
     - maya
+    - 基礎
     - import
     - reference
     - 匯入方式
 ---
 
-## MAYA 的匯入方式
+# MAYA 的匯入方式
 1. import
 2. reference
 
-<hr><br>
+<hr>
 
-## import
+# import
 
 import.ma讀取Model.ma的所有物件，並**生成**與Model.ma相同的所有物件進入檔案裡。<br>
 
 * 兩個檔案的物件**無牽連**（各自獨立）
 * 檔案大
 
-![import](../..//assets/import.jpg)
+![import](../../..//assets/import.jpg)
 
-<hr><br>
+<hr>
 
-## reference
+# reference
 
 reference.ma讀取Model.ma的所有物件，並**顯示**在reference.ma上。<br>
 
@@ -35,6 +36,6 @@ reference.ma讀取Model.ma的所有物件，並**顯示**在reference.ma上。<b
 * 也可在reference.ma檔修改物件，但Model.ma的物件不會有任何影響
 * 檔案小
 
-![reference](../../assets/reference.jpg)
+![reference](../../../assets/reference.jpg)
 
 

@@ -1,18 +1,19 @@
 ---
-title: mgear
-description: Maya mgaer
-pubDate: 2026/7/8
-outline: '腳本'
+title: 'mgear'
+description: 'Maya mgaer'
+pubDate: '2026/7/8'
+outline: 'Rigging'
 tags:
   - maya
   - mgear
   - 骨架工具
   - 動畫工具
+  - Rigging
 ---
 
 
-## 下載連結
-[官方網站_下載](https://www.mgear-framework.com/)
+# 簡介
+[mgaer 官方網站_下載](https://www.mgear-framework.com/)
 
 - 有免費版本可下載使用
 - 用於骨架建構
