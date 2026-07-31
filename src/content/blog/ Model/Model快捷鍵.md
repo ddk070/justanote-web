@@ -12,10 +12,12 @@ tags:
 # 頂部功能選單(Modeling) 
 **F2**：切換至 建模 (Modeling) 選單集 <br>
 
+***
 
 # 滑鼠預設視窗
 **Shift + 滑鼠右鍵 (長按)**：動態上下文選單（核心：Bevel Edge、Bridge、Merge Vertices、Collapse、Target Weld）。<br>
 
+***
 
 # 模型操作
 
@@ -94,12 +96,13 @@ tags:
 
 ## 吸附功能
 > *註：皆為長按啟用，放開關閉*
-<br>
+
  **X**：吸附到網格 (Snap to Grid)。<br>
  **C**：吸附到曲線/邊緣 (Snap to Curve)。<br>
  **V**：吸附到頂點/樞紐點 (Snap to Point)。<br>
  **滑鼠中鍵拖曳（啟用吸附時）**：直接將物件扣定到最接近鼠標的目標點/線/網格上。<br>
- 
+
+***
 
 # UV 編輯器 ( UV Editor )
 請在 UV 編輯器視窗激活狀態下：<br>
@@ -118,6 +121,7 @@ tags:
  **Tab + 滑鼠左鍵拖曳**：在 UV 視窗中同樣適用的筆刷選取。<br>
  **雙擊 UV 點**：選取整個 UV 殼 (UV Shell)。<br>
 
+***
 
 # 拓撲
  **滑鼠左鍵點擊**：放置綠色控制點。<br>

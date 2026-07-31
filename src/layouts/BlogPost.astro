@@ -25,9 +25,7 @@ const { title, description, pubDate, updatedDate, heroImage } = post.data;
 		<BaseHead title={title} description={description} />
 		<style>
 			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
+				width: 100%;
 			}
 			.hero-image {
 				width: 100%;
@@ -42,7 +40,7 @@ const { title, description, pubDate, updatedDate, heroImage } = post.data;
 				width: 720px;
 				max-width: calc(100% - 2em);
 				margin: auto;
-				padding: 0.5rem;
+				padding: 0.5rem 0;
 				color: rgb(var(--gray-dark));
 			}
 			.title {
@@ -88,10 +86,14 @@ const { title, description, pubDate, updatedDate, heroImage } = post.data;
 							<div class="date">
 								<FormattedDate date={pubDate} />
 									<aside class="sidebar mobile-toc">
-										<div class="nav-card">
+										<details open class="nav-card">
+											<summary>
 											<h4>目錄</h4>
+											</summary>
+											<div class="toc-content">
 											<Toc headings={headings} />
-										</div>
+											</div>
+										</details>
 									</aside>
 								{
 									updatedDate && (
@@ -129,7 +131,52 @@ const { title, description, pubDate, updatedDate, heroImage } = post.data;
 		padding: 2rem ;
 		border-radius: 1rem;
 	}
-	
+	/* 讓 details / summary 看起來像個卡片 */
+	.nav-card {
+	overflow: hidden;
+	}
+
+	/* 標題欄位設定 */
+	.nav-card summary {
+	cursor: pointer;
+	user-select: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+	}
+
+	/* 針對 Safari 移除預設箭頭 */
+	.nav-card summary::-webkit-details-marker {
+	display: none;
+	}
+
+	/* 標題文字調整 */
+	.nav-card summary h4 {
+	margin: 0;
+	display: inline-block;
+	font-size: 1.125rem;
+	}
+
+	/* 自訂右側的 +/- 或箭頭符號 (這裡示範用 CSS 做小箭頭) */
+	.nav-card summary::after {
+	content: "›";
+	font-size: 1.25rem;
+	font-weight: bold;
+	transition: transform 0.2s ease;
+	}
+
+	/* 當 details 展開 (open) 時，讓箭頭旋轉 90 度 */
+	.nav-card[open] summary::after {
+	transform: rotate(90deg);
+	}
+
+	/* 展開後的目錄內容區塊內縮 */
+	.toc-content {
+	margin-top: 1rem;
+	border-top: 1px solid #748097;
+	}
+
 	.desktop-toc {
 		display: none;
 	}
@@ -147,7 +194,6 @@ const { title, description, pubDate, updatedDate, heroImage } = post.data;
 	.nav-card ul {
 	list-style: none;
 	padding: 0;
-	margin-left: 1rem;
 	}
 	.nav-card li {
 	margin-bottom: 0.8rem;
@@ -165,36 +211,35 @@ const { title, description, pubDate, updatedDate, heroImage } = post.data;
 	.mk :global(h1) {
 	font-size: 1.75rem;
 	font-weight: bold;
-	margin: 2rem 0;
+	margin: 1rem 0;
 	}
 	.mk :global(h2) {
-	font-size: 1.375rem;
-	margin: 1.5rem 0;
+	font-size: 1.5rem;
+	margin: 1rem 0;
 	}
 	.mk :global(h3) {
-	font-size: 1.125rem;
+	font-size: 1.3rem;
 	font-weight: bold;
-	margin: 1.5rem 0;
+	margin: 1rem 0;
 	}
 	.mk :global(h4) {
-	font-size: 1.0625rem;
+	font-size: 1.25rem;
 	font-weight: bold;
-	margin: 1.5rem 0;
+	margin: 1rem 0;
 	}
 	.mk :global(h5) {
 	font-size: 1rem;
 	font-weight: bold;
-	margin: 1.5rem 0;
+	margin: 1rem 0;
 	}
 	.mk :global(hr) {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
-	margin: 1.5rem 0;
+	margin: 1.25rem 0;
 	}
 	.mk :global(p) {
 	margin-bottom: 1rem;
-	margin-left: 1rem;
-	font-size: 1.25rem;
+	font-size: 1rem;
 	}
 	.mk :global(ul li) {
 	font-size: 1rem;

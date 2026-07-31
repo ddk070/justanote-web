@@ -23,4 +23,5 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-
+筆記紀錄.md
+.obsidian/
