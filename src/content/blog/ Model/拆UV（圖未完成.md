@@ -4,15 +4,15 @@ description: 'maya拆UV'
 pubDate: '2026/7/15'
 outline: 'Model'
 tags:
-  - maya
-  - Model
-  - 拆UV
-  - 腳本
+    - maya
+    - Model
+    - 拆UV
+    - 腳本
 ---
 
 
 
-# 選取想要的物件
+# 選取模型
 
 # Planar
 可以將物件上不知到哪裡出現的切線全部重製

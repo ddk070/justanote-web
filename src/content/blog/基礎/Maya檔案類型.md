@@ -28,7 +28,7 @@ tags:
 ***
 
 
-> # 模型
+> # 模型檔
 
 ## FBX (.fbx)
 
@@ -43,7 +43,7 @@ tags:
 ***
 
 
-> # Animation 
+> # Animation 檔
 
 ## Anim Export/Import (.anim)
 
