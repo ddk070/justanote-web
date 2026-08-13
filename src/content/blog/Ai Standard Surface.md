@@ -26,7 +26,7 @@ tags:
 3. Diffuse Roughness 粗糙度
 4. Metalness 金屬感
 
-![Ai Standard Surface base](../../../assets/image-7.png)
+![Ai Standard Surface base](../../assets/image-7.png)
 
 
 ***
@@ -39,7 +39,7 @@ tags:
 5. Anisotropy 反光旋轉方向
 6. Rotation 反光角度
 
-![Ai Standard Surface Specular](../../../assets/image-8.png)
+![Ai Standard Surface Specular](../../assets/image-8.png)
 
 
 ***
@@ -55,7 +55,7 @@ tags:
 7. Extra Roughness 霧面
 8. Dielectric Priority 多重透明物體渲染方式
 
-![Ai Standard Surface Transmission](../../../assets/image-10.png)
+![Ai Standard Surface Transmission](../../assets/image-10.png)
 
 
 ***
@@ -70,8 +70,8 @@ tags:
 
 * 用於皮膚效果
 
-![Ai Standard Surface Transmission](../../../assets/image-10.png)
-![Ai Standard Surface Transmission](../../../assets/image-18.png)
+![Ai Standard Surface Transmission](../../assets/image-10.png)
+![Ai Standard Surface Transmission](../../assets/image-18.png)
 
 
 
@@ -86,9 +86,9 @@ tags:
 6. Rotation 反光方位走向
 7. Normal （ 不用動 ）
 
-![Ai Standard Surface Coat](../../../assets/image-14.png)
-![Ai Standard Surface Coat](../../../assets/image-20.png)
-![Ai Standard Surface Coat](../../../assets/image-9.png)
+![Ai Standard Surface Coat](../../assets/image-14.png)
+![Ai Standard Surface Coat](../../assets/image-20.png)
+![Ai Standard Surface Coat](../../assets/image-9.png)
 
 
 
@@ -103,7 +103,7 @@ tags:
 * 絨毛效果/ 頂上邊光
 * 適用於衣服材質
 
-![Ai Standard Surface sheen](../../../assets/image-17.png)
+![Ai Standard Surface sheen](../../assets/image-17.png)
 
 
 ***
@@ -112,7 +112,7 @@ tags:
 1. Weight 發光程度
 2. Color 發光顏色
 
-![Ai Standard Surface Emission](../../../assets/image-15.png)
+![Ai Standard Surface Emission](../../assets/image-15.png)
 
 
 ***
@@ -124,16 +124,16 @@ tags:
 * 需搭配其他反光或光感，才有作用
 * 應用於高反光、複合式材質、甲蟲殼上、烤漆效果
 
-![Ai Standard Surface Thin Film](../../../assets/image-23.png)
-![Ai Standard Surface Thin Film](../../../assets/image-29.png)
-![Ai Standard Surface Thin Film](../../../assets/image-26.png)
+![Ai Standard Surface Thin Film](../../assets/image-23.png)
+![Ai Standard Surface Thin Film](../../assets/image-29.png)
+![Ai Standard Surface Thin Film](../../assets/image-26.png)
 
 ***
 
 # 標準表面預設
 * 可用於快速上材質
 
-![Ai Standard Surface Presets](../../../assets/image-4.png)
+![Ai Standard Surface Presets](../../assets/image-4.png)
 
 
 ***

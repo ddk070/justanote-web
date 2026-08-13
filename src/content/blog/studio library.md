@@ -4,10 +4,10 @@ description: 'Maya studiolibrary'
 pubDate: '2026/7/8'
 outline: 'Animation'
 tags:
-  - maya
-  - studiolibrary
-  - 動畫工具
-  - Animation 
+    - maya
+    - studiolibrary
+    - 動畫工具
+    - Animation 
 ---
 
 

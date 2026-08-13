@@ -75,7 +75,11 @@ const { headings = [] } = Astro.props;
     .toc-link {
     font-size: 1.25rem;
   }
-
+  html {
+    /* 預留 100px 的頂部邊界，不管跳到哪都不會被 Header 遮住 */
+    scroll-padding-top: 100px;
+    scroll-behavior: smooth; /* 順便加上平滑滾動 */
+  }
   }
 </style>
 

@@ -4,9 +4,9 @@ description: 'maya 匯出anim檔'
 pubDate: '2026/08/10'
 outline: 'Animation'
 tags:
-  - maya
-  - Animation 
-  - anim
+    - maya
+    - Animation 
+    - anim
   
 ---
 

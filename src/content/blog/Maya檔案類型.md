@@ -4,9 +4,9 @@ description: 'maya檔案格式類型'
 pubDate: '2026/7/15'
 outline: '基礎'
 tags:
-  - maya
-  - 基礎
-  - 檔案格式
+    - maya
+    - 基礎
+    - 檔案格式
 ---
 
 > # maya原生檔

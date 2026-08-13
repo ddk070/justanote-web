@@ -4,12 +4,12 @@ description: 'Maya model腳本'
 pubDate: '2026/7/6'
 outline: 'Model'
 tags:
-  - maya
-  - 拆UV
-  - copy UV
-  - mel
-  - 腳本
-  - Model
+    - maya
+    - 拆UV
+    - copy UV
+    - mel
+    - 腳本
+    - Model
 ---
 
 
@@ -18,7 +18,7 @@ tags:
 1. 把程式碼貼在script Editor
 2. 按ctrl A全選程式碼後，按圖中的按鈕，就能製成按鈕在上方界面
 
-![save script to shelf](../../../assets/shelf.png)
+![save script to shelf](../../assets/shelf.png)
 
 * 未來只要是這台電腦，按鈕都會存在且不會消失（除非你刪除
 

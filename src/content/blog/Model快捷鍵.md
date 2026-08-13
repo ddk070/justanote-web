@@ -4,9 +4,9 @@ description: 'maya Model模型快捷鍵'
 pubDate: '2026/7/10'
 outline: 'Model'
 tags:
-  - maya
-  - 快捷鍵
-  - Model
+    - maya
+    - 快捷鍵
+    - Model
 ---
 
 # 頂部功能選單(Modeling) 

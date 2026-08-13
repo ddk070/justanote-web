@@ -4,9 +4,9 @@ description: 'setkey時模型變形問題'
 pubDate: '2026/07/28'
 outline: 'Animation'
 tags:
-  - maya
-  - Animation 
-  - 疑難雜症
+    - maya
+    - Animation 
+    - 疑難雜症
 ---
 
 
@@ -20,7 +20,7 @@ Set key時，視窗的姿勢會變形。
 ### 關掉GPU Override
 * Preferences > Animation > 關掉GPU Override 
 
-![GPU Override](../../../assets/image-3.png)
+![GPU Override](../../assets/image-3.png)
 
 
 

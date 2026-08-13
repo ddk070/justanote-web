@@ -24,7 +24,7 @@ import.ma讀取Model.ma的所有物件，並**生成**與Model.ma相同的所有
 * 兩個檔案的物件**無牽連**（各自獨立）
 * 檔案大
 
-![import](../../..//assets/import.jpg)
+![import](../..//assets/import.jpg)
 
 <hr>
 
@@ -36,6 +36,6 @@ reference.ma讀取Model.ma的所有物件，並**顯示**在reference.ma上。<b
 * 也可在reference.ma檔修改物件，但Model.ma的物件不會有任何影響
 * 檔案小
 
-![reference](../../../assets/reference.jpg)
+![reference](../../assets/reference.jpg)
 
 
