@@ -232,3 +232,8 @@ RWD改的差不多了，把header的固定在手機版裡拿掉。<br>
 
 ### 2026-8-14_ 週五
 新增刪除歷史紀錄、Freeze Transformations、Center Pivot
+
+***
+
+### 2026-8-17_ 週一
+修改拆UV
