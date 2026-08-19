@@ -1,12 +1,12 @@
 ---
-title: 'Animation 快捷鍵'
-description: 'maya Animation 快捷鍵'
-pubDate: '2026/7/6'
-outline: 'Animation'
+title: Animation 快捷鍵
+description: maya Animation 快捷鍵
+pubDate: 2026/7/6
+outline: Animation
 tags:
-    - maya
-    - 快捷鍵
-    - Animation
+  - maya
+  - 快捷鍵
+  - Animation
 ---
 
 # 播放控制
@@ -23,11 +23,13 @@ tags:
 
 # 設Key
 
-**設定關鍵影格（所有屬性）：** 按鍵盤 `S` <br>
+**設定關鍵影格（所有屬性）：**  `S` <br>
 **僅設定平移（Translate）：** `Shift` + `W` <br>
 **僅設定旋轉（Rotate）：** `Shift` + `E` <br>
 **僅設定縮放（Scale）：** `Shift` + `R` <br>
-
+**在目前影格設定平移（Translate）：** `Ctrl-Shift` + `W` <br>
+**在目前影格設定旋轉（Rotate）：**`Ctrl-Shift` + `E` <br>
+**在目前影格設定縮放（Scale）：** `Ctrl-Shift` + `R` <br>
 
 <hr>
 
@@ -39,3 +41,5 @@ tags:
 
 
 
+# 參考資料
+* [maya Animation hotkeys](https://help.autodesk.com/view/MAYAUL/2023/ENU/?guid=GUID-0639ADA0-EBE5-4703-A874-92C80E4A0516)

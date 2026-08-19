@@ -242,3 +242,9 @@ RWD改的差不多了，把header的固定在手機版裡拿掉。<br>
 
 ### 2026-8-18_ 週二
 新增Arnold 燈光種類，修改關於頁面的連結顯示。
+
+***
+
+### 2026-8-19_ 週三
+今日是七夕。[maya note](https://publish.obsidian.md/mister-chad/welcome)<br>
+新增Arnold燈光屬性設定，修改Animation 快捷鍵、拆UV
