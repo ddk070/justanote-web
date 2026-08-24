@@ -256,7 +256,12 @@ RWD改的差不多了，把header的固定在手機版裡拿掉。<br>
 
 ***
 
-### 2026-8-20_ 週四
+### 2026-8-21_ 週五
 考慮用[brevo](https://onboarding.brevo.com/account/register)寫電子報。<br>
 新增Arnold cpu 與 gpu 算圖差別。<br>
 感覺要統一每週的筆記主題，所以用轉排決定，下週寫rigging。
+
+***
+
+### 2026-8-24_ 週一
+新增約束系統（Constrain）、Channel Box數值顏色。
