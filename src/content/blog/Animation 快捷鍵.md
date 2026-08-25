@@ -1,8 +1,8 @@
 ---
-title: Animation 快捷鍵
-description: maya Animation 快捷鍵
-pubDate: 2026/7/6
-outline: Animation
+title: 'Animation 快捷鍵'
+description: 'maya Animation 快捷鍵'
+pubDate: '2026/7/6'
+outline: 'Animation'
 tags:
   - maya
   - 快捷鍵

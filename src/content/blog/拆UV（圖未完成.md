@@ -1,8 +1,8 @@
 ---
-title: 拆UV
-description: maya拆UV
-pubDate: 2026/7/15
-outline: Model
+title: '拆UV'
+description: 'maya拆UV'
+pubDate: '2026/7/15'
+outline: 'Model'
 tags:
   - maya
   - Model
@@ -36,3 +36,4 @@ tags:
 > 依照個人習慣，使用即可。
 
 
+拆UV快捷鍵:[Model快捷鍵](/blog/model快捷鍵#uv-編輯器--uv-editor-)

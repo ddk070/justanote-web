@@ -1,8 +1,8 @@
 ---
-title: Channel Box數值顏色
-description: maya Channel Box數值顏色
-pubDate: 2026/08/24
-outline: 基礎
+title: 'Channel Box數值顏色'
+description: 'maya Channel Box數值顏色'
+pubDate: '2026/08/24'
+outline: '基礎'
 tags:
   - maya
   - 基礎

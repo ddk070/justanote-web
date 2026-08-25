@@ -1,8 +1,8 @@
 ---
-title: Arnold cpu 與 gpu 算圖差別
-description: maya Arnold cpu 與 gpu 算圖差別
-pubDate: 2026/08/21
-outline: Rendering
+title: 'Arnold cpu 與 gpu 算圖差別'
+description: 'maya Arnold cpu 與 gpu 算圖差別'
+pubDate: '2026/08/21'
+outline: 'Rendering'
 tags:
   - maya
   - Render

@@ -1,8 +1,8 @@
 ---
-title: 約束系統（Constrain）
-description: maya 約束系統（Constrain）
-pubDate: 2026/08/24
-outline: Rigging
+title: '約束系統（Constrain）'
+description: 'maya 約束系統（Constrain）'
+pubDate: '2026/08/24'
+outline: 'Rigging'
 tags:
   - maya
   - Rigging
@@ -47,12 +47,12 @@ tags:
 
 # 如何使用約束
 1. 先選取控制物件（父），在選取被控制物件（子）
-2. 然後按上述任何一個約束功能
+2. 按上述任何一個約束功能
 
 > 成功後，被控制物件（子）在outliner裡有一個紅色連結圖示，表示被綁定<br>
-> 視窗右邊，被控制物件（子）的模型數值旁也會顯示藍色，表示被綁定。
+> 視窗右邊，被控制物件（子）的模型數值旁也會顯示藍色，表示被綁定。 
 
-
+更多顏色代表狀態請看：[Channel Box數值顏色](/blog/channel-box數值顏色/)
 
 
 # 參考資料
