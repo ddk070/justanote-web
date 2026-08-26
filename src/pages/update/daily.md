@@ -271,3 +271,8 @@ RWD改的差不多了，把header的固定在手機版裡拿掉。<br>
 ### 2026-8-25_ 週二
 新增IK 與 FK、Driven Key，修改拆UV、約束系統（Constrain）、避坑清單、Center Pivot。<br>
 搞好筆記間的連結使用、把目錄字縮小。
+
+***
+
+### 2026-8-26_ 週三
+新增Add Attribute，修改本網站搜索關鍵字
