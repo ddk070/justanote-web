@@ -1,5 +1,5 @@
 ---
-title: 'Driven Key'
+title: 'set Driven Key'
 description: 'maya set Driven Key'
 pubDate: '2026/08/25'
 outline: 'Rigging'
@@ -11,11 +11,11 @@ tags:
 
 
 # 用途
-在面板（Channel Box）上拖曳數值來驅動動作
+綁定物件與物件的[屬性](/blog/add-attribute/)數值跟隨動作
 
 ***
 
-# Driven Key
+# set Driven Key
 * `Animation ` 或 `Rigging ` 選單  ➔ `Key` ➔` Set Driven Key` ➔ Set... 開啟
 
 

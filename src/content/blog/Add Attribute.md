@@ -1,8 +1,8 @@
 ---
-title: " Add Attribute "
-description: " maya Add Attribute "
-pubDate: " 2026/08/26 "
-outline: " Rigging "
+title:  'Add Attribute'
+description:  'maya Add Attribute' 
+pubDate: '2026/08/26'
+outline: 'Rigging'
 tags:
   - maya
   - Rigging
@@ -19,6 +19,7 @@ tags:
 物件的Channel Box 的 `Edit`  >  `Add Attribute`
 
 ## New 標籤
+『建立常用的基本類型屬性』
 
 - Long Name ： 屬性在maya裡的id名稱
 
@@ -40,9 +41,11 @@ tags:
 
 
 
+
 ***
 
 # 參考資料
 * [attributeName](https://download.autodesk.com/us/maya/2010help/CommandsPython/attributeName.html)
+* [Add Attribute](https://download.autodesk.com/global/docs/maya2014/en_us/index.html?url=files/Modify__Add_Attribute.htm,topicNumber=d30e60869)
 
 

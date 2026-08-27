@@ -38,7 +38,7 @@ const { title, description, pubDate, updatedDate, heroImage } = post.data;
 			}
 			.prose {
 				width: 720px;
-				max-width: calc(100% - 2em);
+				max-width: calc(100% - 0.5rem);
 				margin: auto;
 				padding: 0.5rem 0;
 				color: rgb(var(--gray-dark));
@@ -51,6 +51,7 @@ const { title, description, pubDate, updatedDate, heroImage } = post.data;
 			}
 			.title h1 {
 				margin: 0 0 0.5em 0;
+				font-size: 3rem;
 			}
 			.date {
 				margin-bottom: 0.5em;
@@ -211,11 +212,11 @@ const { title, description, pubDate, updatedDate, heroImage } = post.data;
 	.mk :global(h1) {
 	font-size: 1.75rem;
 	font-weight: bold;
-	margin: 1rem 0;
+	margin: 1.5rem 0;
 	}
 	.mk :global(h2) {
 	font-size: 1.5rem;
-	margin: 1rem 0;
+	margin: 1.5rem 0;
 	}
 	.mk :global(h3) {
 	font-size: 1.3rem;
@@ -239,15 +240,35 @@ const { title, description, pubDate, updatedDate, heroImage } = post.data;
 	}
 	.mk :global(p) {
 	margin-bottom: 1rem;
-	font-size: 1rem;
+	font-size: 1.1rem;
+	}
+	.mk :global(ul) {
+	padding-left: 0;
+	margin-left: 0;
+	list-style-position: inside; /* 讓點點（圓點）留在行內，不向外突出 */
 	}
 	.mk :global(ul li) {
-	font-size: 1rem;
-	line-height: 2;
+	font-size: 1.1rem;
+	line-height: 2.5;
+	margin-left: 0;
+  	padding-left: 0;
+	}
+	.mk :global(ol) {
+	padding-left: 0;
+	margin-left: 0;
+	list-style-position: inside; /* 讓點點（圓點）留在行內，不向外突出 */
 	}
 	.mk :global(ol li) {
-	font-size: 1rem;
-	line-height: 2;
+	font-size: 1.1rem;
+	line-height: 2.5;
+	margin-left: 0;
+  	padding-left: 0;
+	}
+	.mk :global(ol li)::marker {
+	color: #bbc4db;        /* 改顏色（例如藍色） */
+	font-weight: bold;     /* 數字加粗 */
+	font-size: 1.1em;      /* 數字稍大一點 */
+	font-family: monospace; /* 等寬字體 */
 	}
 	.mk :global(img) {
 	margin: auto;

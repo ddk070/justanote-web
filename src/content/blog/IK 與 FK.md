@@ -1,8 +1,8 @@
 ---
-title: ' IK 與 FK '
-description: ' maya IK 與 FK '
-pubDate: ' 2026/08/25 '
-outline: ' Rigging '
+title: 'IK 與 FK'
+description: 'maya IK 與 FK'
+pubDate: '2026/08/25'
+outline: 'Rigging'
 tags:
     - maya
     - Rigging

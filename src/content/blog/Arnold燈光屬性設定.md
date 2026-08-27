@@ -1,8 +1,8 @@
 ---
-title: Arnold 燈光屬性設定
-description: maya Arnold燈光屬性設定
-pubDate: 2026/08/19
-outline: Lighting
+title: 'Arnold 燈光屬性設定'
+description: 'maya Arnold燈光屬性設定'
+pubDate: '2026/08/19'
+outline: 'Lighting'
 tags:
   - maya
   - Lighting
