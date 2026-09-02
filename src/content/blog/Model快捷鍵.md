@@ -50,7 +50,9 @@ tags:
 **選取面，按住 Shift 在隔壁相鄰的面雙擊左鍵。**：選取該方向的整條面迴路 (Face Loop)。<br>
 **選取面 →rightarrow 雙擊相鄰面**：選取該方向的整條面迴路 (Face Loop)。<br>
 **選取面 →rightarrow Ctrl + 滑鼠右鍵 →rightarrow To Edges →rightarrow To Edge Perimeter**：將選取的面快速轉換為其**外圍邊緣**。<br>
- **Shift + >** / **Shift + <**：擴大 / 縮小選取點、線、面的範圍 (Grow / Shrink Selection)。<br>
+
+**擴大選取（Grow Selection）**：**`Shift` + `.`**（即大於號 **`>`**）<br>
+**縮小選取（Shrink Selection）**：**`Shift` + `,`**（即小於號 **`<`**）<br>
 
 ### 移動線
  **移動工具 (W) + Shift + Ctrl (長按)**：切換為**沿線/沿面滑動模式 (Slide Edge / Slide Vertex)**。<br>

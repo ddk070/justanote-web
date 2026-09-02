@@ -291,3 +291,8 @@ RWD改的差不多了，把header的固定在手機版裡拿掉。<br>
 
 ### 2026-8-31_ 週一
 搞search-console驗證，改了自從使用模板後就在也沒動過的seo檔，改回了自己的網址。
+
+***
+
+### 2026-9-2_ 週三
+search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方版本文件
