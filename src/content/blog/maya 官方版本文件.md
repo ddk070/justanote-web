@@ -7,6 +7,7 @@ tags:
   - maya
   - 基礎
   - 官方文件
+  - 網站
 ---
 
 
@@ -24,6 +25,9 @@ tags:
 - [Autodesk Maya 2016](https://help.autodesk.com/view/MAYAUL/2016/ENU/)
 - [Autodesk Maya 2015](https://help.autodesk.com/view/MAYAUL/2015/CHS/)
 - [Autodesk Maya 2014](https://download.autodesk.com/global/docs/maya2014/en_us/)
+- [Autodesk Maya 2013](https://download.autodesk.com/global/docs/maya2013/en_us/)
+- [Autodesk Maya 2012](https://download.autodesk.com/global/docs/maya2012/zh_cn/)
+
 
 
 ***
@@ -31,7 +35,7 @@ tags:
 > Maya 2020 年 12 月 8 日發布 maya 2020.4。<br>
 > 2021 年 3 月 24 日發布 maya 2022。<br>
 > 官方表示「為了方便大家管理版本，讓 Maya 和 3ds Max 齊名」。<br>
-> 並將maya 永久授權改為了線上訂閱制、 Python 2 改用 Python 3。
+> 且宣佈全面停售並終止所有舊版永久授權的維護方案 、 Python 2 改用 Python 3。
 
 
 

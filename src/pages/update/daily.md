@@ -296,3 +296,8 @@ RWD改的差不多了，把header的固定在手機版裡拿掉。<br>
 
 ### 2026-9-2_ 週三
 search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方版本文件
+
+***
+
+### 2026-9-3_ 週四
+新增maya 腳本語言、ngSkinTools，修改權重筆記、maya 官方版本文件、Advanced Skeleton
