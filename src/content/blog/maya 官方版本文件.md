@@ -10,7 +10,7 @@ tags:
   - 網站
 ---
 
-
+# maya 2027～2012
 - [Autodesk Maya 2027](https://help.autodesk.com/view/MAYAUL/2027/ENU/)
 - [Autodesk Maya 2026](https://help.autodesk.com/view/MAYAUL/2026/ENU/)
 - [Autodesk Maya 2025](https://help.autodesk.com/view/MAYAUL/2025/ENU/)

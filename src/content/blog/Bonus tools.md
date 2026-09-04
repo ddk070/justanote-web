@@ -4,15 +4,15 @@ description: 'Autodesk maya Bonus tools'
 pubDate: '2026/09/02'
 outline: '基礎'
 tags:
-  - maya
-  - 基礎
-  - 腳本
-  - Model
-  - 拆UV
-  - Rigging
-  - Animation
-  - FX
-  - Rendering
+    - maya
+    - 基礎
+    - 腳本
+    - Model
+    - 拆UV
+    - Rigging
+    - Animation
+    - FX
+    - Rendering
 ---
 
 # 簡介
