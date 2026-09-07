@@ -306,3 +306,8 @@ search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方
 
 ### 2026-9-4_ 週五
 新增匯出權重，修改權重筆記、maya 官方版本文件、Bonus tools、ngSkinTools
+
+***
+
+### 2026-9-7_ 週一
+新增動畫媒體播放器、DuBlast、Tween Machine，修改匯出權重、ngSkinTools

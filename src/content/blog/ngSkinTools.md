@@ -1,8 +1,8 @@
 ---
-title: ngSkinTools
-description: maya ngSkinTools
-pubDate: 2026/09/03
-outline: Rigging
+title: 'ngSkinTools'
+description: 'maya ngSkinTools'
+pubDate: '2026/09/03'
+outline: 'Rigging'
 tags:
     - maya
     - Rigging
