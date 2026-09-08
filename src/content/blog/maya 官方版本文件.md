@@ -10,7 +10,7 @@ tags:
   - 網站
 ---
 
-# maya 2027～2012
+# maya 2027～2012 主頁
 - [Autodesk Maya 2027](https://help.autodesk.com/view/MAYAUL/2027/ENU/)
 - [Autodesk Maya 2026](https://help.autodesk.com/view/MAYAUL/2026/ENU/)
 - [Autodesk Maya 2025](https://help.autodesk.com/view/MAYAUL/2025/ENU/)
@@ -36,6 +36,10 @@ tags:
 > 2021 年 3 月 24 日發布 maya 2022。<br>
 > 官方表示「為了方便大家管理版本，讓 Maya 和 3ds Max 齊名」。<br>
 > 且宣佈全面停售並終止所有舊版永久授權的維護方案 、 Python 2 改用 Python 3。
+
+
+# 快捷鍵
+
 
 
 
