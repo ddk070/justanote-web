@@ -316,3 +316,8 @@ search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方
 
 ### 2026-9-8_ 週二
 修改基礎快捷鍵、Model快捷鍵、大綱視窗（Outliner）、拆UV、Advanced Skeleton、Bonus tools、maya 官方版本文件、mgear、studio library
+
+***
+
+### 2026-9-11_ 週五
+新增Deformers
