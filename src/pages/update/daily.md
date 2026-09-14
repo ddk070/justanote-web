@@ -321,3 +321,8 @@ search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方
 
 ### 2026-9-11_ 週五
 新增Deformers
+
+***
+
+### 2026-9-14_ 週一
+新增Bifrost for Maya介紹、OpenUSD，修改Deformers、maya 官方版本文件
