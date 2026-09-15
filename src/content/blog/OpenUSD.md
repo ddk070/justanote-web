@@ -1,8 +1,8 @@
 ---
-title: OpenUSD
-description: maya OpenUSD（Universal Scene Description）
-pubDate: 2026/09/14
-outline: 基礎
+title: 'OpenUSD'
+description: 'maya OpenUSD（Universal Scene Description）'
+pubDate: '2026/09/14'
+outline: '基礎'
 tags:
   - maya
   - 基礎
