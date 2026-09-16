@@ -1,8 +1,8 @@
 ---
-title: 'Model快捷鍵'
-description: 'maya Model模型快捷鍵'
-pubDate: '2026/7/10'
-outline: 'Model'
+title: Model快捷鍵
+description: maya Model模型快捷鍵
+pubDate: 2026/7/10
+outline: Model
 tags:
   - maya
   - 快捷鍵
@@ -105,25 +105,20 @@ tags:
 
 
 ## 物體軸向
- **D / Insert**：進入/退出編輯軸向模式 (Edit Pivot)。<br>
- **D + 滑鼠左鍵點擊組件**：將軸向對齊至該點的法線 (Normal) 或線的走向。<br>
- **D + V (長按)** / **D + C (長按)**：將軸向精準吸附至目標頂點/邊線。<br>
- **W / E / R + 滑鼠左鍵 (長按)**：彈出座標系標記選單（快速切換 Object, World, Component, Normal, Parent）。<br>
- **Ctrl + 滑鼠中鍵拖曳軸向控制桿**：鎖定該軸向，在與其垂直的平面上進行二維平移。<br>
- **Shift + 滑鼠中鍵在空白處拖曳**：沿著目前選定的**軸向**（反白顯示的軸）進行複製或擠出。<br>
- **J (長按)**：啟用步進式變形 (Discrete Transform)，依設定的角度（如 15°）或距離跳格。<br>
- **中鍵拖曳（無選取軸向）**：<br>
-   **W 狀態下**：沿著當前視角平面移動。<br>
-   **E 狀態下**：沿著視鏡頭垂直軸旋轉（Tumble 旋轉）。
+
+**軸向模式 (Edit Pivot)：** `D` / `Insert` <br>
+**步進式變形 (Discrete Transform)：** `J (長按)` <br>
+
 
 
 ## 吸附功能
 > *註：皆為長按啟用，放開關閉*
 
- **X**：吸附到網格 (Snap to Grid)。<br>
- **C**：吸附到曲線/邊緣 (Snap to Curve)。<br>
- **V**：吸附到頂點/樞紐點 (Snap to Point)。<br>
- **滑鼠中鍵拖曳（啟用吸附時）**：直接將物件扣定到最接近鼠標的目標點/線/網格上。<br>
+**吸附到網格 (Snap to Grid)：** `X` <br>
+**吸附到曲線/邊緣 (Snap to Curve)：**`C` <br>
+**吸附到頂點/樞紐點 (Snap to Point)：** `V` <br>
+**直接將物件扣定到最接近鼠標的目標點/線/網格上：** `滑鼠中鍵拖曳（啟用吸附時）` <br>
+
 
 ***
 
@@ -131,30 +126,34 @@ tags:
 請在 UV 編輯器視窗使用：<br>
 
 ## UV快捷鍵視窗
-**F12**：切換到 UV 模式
- **滑鼠右鍵 (長按)**：切換選取模式（UV、UV Shell、Edge、Face、Vertex）。<br>
- **Shift + 滑鼠右鍵 (長按)**：展開 UV 工具快顯選單（包含 Unfold、Layout、Cut、Sew）。<br>
- 
-## 點線面編輯
-**W / E / R**：與主視窗相同的移動、旋轉、縮放。<br>
- **Shift + X**：剪開 UV 線 (Cut UVs)。<br>
- **Shift + S**：縫合 UV 線 (Sew UVs)。<br>
- **Ctrl + U**：執行**自動展開 (Unfold UVs)**。<br>
- **Ctrl + L**：執行**UV 排版排滿 (Layout UVs)**。<br>
- **Tab + 滑鼠左鍵拖曳**：在 UV 視窗中同樣適用的筆刷選取。<br>
- **雙擊 UV 點**：選取整個 UV 殼 (UV Shell)。<br>
+**UV 模式：** `F12` <br>
+**切換選取模式（UV、UV Shell、Edge、Face、Vertex）：**`滑鼠右鍵 (長按)` <br>
+**展開 UV 工具快顯選單（包含 Unfold、Layout、Cut、Sew）：** `Shift + 滑鼠右鍵 (長按)` 
+
+## UV點線面編輯
+**UV移動、旋轉、縮放：** `W` / `E` / `R` <br>
+**Cut：**`Shift` + `X` <br>
+**Sew：** `Shift` + `S` <br>
+**Unfold：** `Ctrl` + `U` <br>
+**Layout：** `Ctrl` + `L` <br>
+**選取整個 UV 殼 (UV Shell)：** `雙擊 UV 點` <br>
+**筆刷選取：** `Tab` + `滑鼠左鍵拖曳` <br>
+
 
 ***
 
 # 拓撲
- **滑鼠左鍵點擊**：放置綠色控制點。<br>
- **Shift + 滑鼠左鍵（在四點中點擊）**：生成四邊面 (Quad Face)。<br>
- **Tab + 滑鼠左鍵拖曳（在邊緣上）**：延伸單一邊緣 (Extend Edge)。<br>
- **Tab + 滑鼠中鍵拖曳**：延伸整條邊緣迴路 (Extend Edge Loop)。<br>
- **Ctrl + 滑鼠左鍵**：直接插入循環線。<br>
- **Ctrl + Shift + 滑鼠左鍵**：刪除控制點、線或面。<br>
- **Shift + 滑鼠左鍵拖曳**：放鬆網格布線 (Relax)。<br>
- **M + 滑鼠左鍵拖曳**：拖曳點以進行吸附焊接 (Merge Point)。<br>
- **Tab + 滑鼠左鍵點擊並沿邊線拖曳**：快速沿著拓撲路徑進行延伸選取。<br>
- **點擊 A 點 \rightarrow Shift + 雙擊 B 點**：自動選取兩點之間最短拓撲路徑 (Shortest Edge Path)。<br>
+**放置綠色控制點：** `滑鼠左鍵點擊` <br>
+**生成四邊面 (Quad Face)：**`Shift` + `滑鼠左鍵（在四點中點擊）` <br>
+**延伸單一邊緣 (Extend Edge)：** `Tab` + `滑鼠左鍵拖曳（在邊緣上）` <br>
+**延伸整條邊緣迴路 (Extend Edge Loop)：** `Tab` + `滑鼠中鍵拖曳` <br>
+**直接插入循環線：** `Ctrl` + `滑鼠左鍵` <br>
+**刪除控制點、線或面：** `Ctrl` + `Shift` + `滑鼠左鍵` <br>
+**放鬆網格布線 (Relax)：** `Shift` + `滑鼠左鍵拖曳` <br>
+**拖曳點以進行吸附焊接 (Merge Point)：** `M` + `滑鼠左鍵拖曳` <br>
+**快速沿著拓撲路徑進行延伸選取：**`Tab` + `滑鼠左鍵點擊並沿邊線拖曳` <br>
+**自動選取兩點之間最短拓撲路徑 (Shortest Edge Path)：** `點擊 A 點 \rightarrow Shift` + `雙擊 B 點` <br>
+
+
+
 

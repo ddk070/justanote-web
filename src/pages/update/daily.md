@@ -331,3 +331,8 @@ search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方
 
 ### 2026-9-15_ 週二
 新增maya 跨 blender 生存設定
+
+***
+
+### 2026-9-2_ 週三
+新增Bind skin，修改Model快捷鍵、ngSkinTools、DuBlast
