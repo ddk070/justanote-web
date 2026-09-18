@@ -1,6 +1,6 @@
 ---
-title: 'Bind skin'
-description: 'maya Bind skin'
+title: 'Bind skin 綁定選項'
+description: 'maya Bind skin 綁定選項設定'
 pubDate: '2026/09/16'
 outline: 'Rigging'
 tags:

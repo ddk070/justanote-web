@@ -341,3 +341,8 @@ search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方
 
 ### 2026-9-17_ 週四
 修改Bind skin
+
+***
+
+### 2026-9-18_ 週五
+新增playblast設定，修改Bind skin
