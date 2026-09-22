@@ -351,3 +351,8 @@ search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方
 
 ### 2026-9-21_ 週一
 新增Animo
+
+***
+
+### 2026-9-22_ 週二
+新增Cached Playback
