@@ -1,8 +1,8 @@
 ---
-title: Cached Playback（缓存播放）
-description: maya Cached Playback（缓存播放）
-pubDate: 2026/09/22
-outline: Animation
+title: 'Cached Playback（缓存播放）'
+description: 'maya Cached Playback（缓存播放）'
+pubDate: '2026/09/22'
+outline: 'Animation'
 tags:
   - maya
   - Animation
@@ -21,8 +21,8 @@ tags:
 
 
 ## 使用注意
-1. 動畫太長、場景太重：藍色條錄到一半卡住變灰色，代表你電腦記憶體（RAM）不夠塞了。
-2. 跳黃字警告（Safe Mode）：場景裡有某些太古董或太複雜的外掛節點，錄影機不支援，功能會自動壞掉。
+1. 硬體限制：藍色條錄到一半卡住變灰色，代表動畫太長、場景太重，你電腦記憶體（RAM）不夠塞了。
+2. 跳黃字警告（Safe Mode）：場景裡有某些太古董或太複雜的外掛節點，錄影機不支援，功能會自動停掉。
 
 
 ## 開啟
