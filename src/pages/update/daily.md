@@ -359,5 +359,10 @@ search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方
 
 ***
 
-### 2026-9-17_ 週四
+### 2026-9-23_ 週四
 新增Time Slider、修改Cached Playback、Animation 快捷鍵
+
+***
+
+### 2026-9-29_ 週一
+新增Dope Sheet（攝影表）和圖示、修改Time Slider、Animo、Cached Playback

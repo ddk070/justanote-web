@@ -1,6 +1,6 @@
 ---
-title: 'Animo'
-description: 'maya Animo Toolset'
+title: 'Animo 動畫工具'
+description: 'maya Animo 動畫工具'
 pubDate: '2026/09/21'
 outline: 'Animation'
 tags:
@@ -21,7 +21,9 @@ tags:
 - 支援maya2022-2026
 - 目前正處於測試階段,可能含有一些錯誤
 
+***
 
+# 功能
 1. 支援不同角色在不同檔案之間複製動畫與姿勢
 2. 保存與恢復關鍵幀時間，方便在 Bake 動畫後找回乾淨的 Key 結構
 3. 合併動畫圖層的速度比 Maya 原生工具快 10 至 50 倍

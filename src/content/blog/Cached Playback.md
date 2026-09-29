@@ -26,7 +26,7 @@ tags:
 
 
 ## 開啟
-- 左鍵點擊 Maya 右下角`電影膠片撥放圖標`![Cached Playback](../..//assets/Cached Playback.jpg)
+- 左鍵點擊 Maya 右下角`電影膠片撥放圖標`![Cached Playback](../../assets/CachedPlayback.png)
 或是
 - 在時間軸內`滑鼠右鍵` > `Cached Playback`
 
