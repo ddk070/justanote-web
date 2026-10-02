@@ -15,7 +15,7 @@ tags:
 ## Arnold 
 * 是Maya內建的寫實算圖引擎
 * 含有 Ai 的材質球
-* 一定要打光
+* 一定要打光，算圖才會顯示
 * Ai Standard Surface 是Arnold的基礎標準材質
 
 ***

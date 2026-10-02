@@ -371,3 +371,8 @@ search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方
 
 ### 2026-9-30_ 週三
 新增Motion Trails、修改Time Slider、大綱視窗（Outliner）
+
+***
+
+### 2026-10-02_ 週五
+新增Graph Editor、修改Ai Standard Surface
