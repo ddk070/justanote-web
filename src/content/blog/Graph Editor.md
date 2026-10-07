@@ -6,6 +6,7 @@ outline: 'Animation'
 tags:
   - maya
   - Animation
+  - 快捷鍵
 ---
 
 
@@ -81,8 +82,8 @@ tags:
 
 
 # 開啟線循環 
-- **前方無限：** `Curves` > `Pre-Infinity`
-- **後方無限：** `Curves` > `Post-Infinity`
+- **前方無限：** `Curves` > `Pre-Infinity` ![cyclebefore.png](../..//assets/cyclebefore.jpg)
+- **後方無限：** `Curves` > `Post-Infinity` ![cycleafter.png](../..//assets/cycleafter.jpg)
 
 1. 循環(Cycle)：尾接頭，重複循環
 2. 偏移量循環(Cycle with Offset)：接續終點重複曲線形狀，向上或向下延伸
@@ -97,9 +98,25 @@ tags:
 
 
 # Tangent 類型
+- 點擊key會出現的翹翹板就是Tangent
 
+## Auto Span (Legacy)
+自動（預設）。
 
+## Spline Tangents
+用於緩衝。
 
+## Linear Tangents
+用於打尖。
+
+## Flat Tangents
+用水平。
+
+## Step Tangents
+可用於檢查動作，類似定格效果。
+
+## Break Tangents
+用於打斷，可自由調整兩邊的角度。
 
 
 ***
