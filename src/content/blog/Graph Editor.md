@@ -82,8 +82,8 @@ tags:
 
 
 # 開啟線循環 
-- **前方無限：** `Curves` > `Pre-Infinity` ![cyclebefore.png](../..//assets/cyclebefore.jpg)
-- **後方無限：** `Curves` > `Post-Infinity` ![cycleafter.png](../..//assets/cycleafter.jpg)
+- **前方無限：** `Curves` > `Pre-Infinity` ![cyclebefore.png](../../assets/cyclebefore.png)
+- **後方無限：** `Curves` > `Post-Infinity` ![cycleafter.png](../../assets/cycleafter.png)
 
 1. 循環(Cycle)：尾接頭，重複循環
 2. 偏移量循環(Cycle with Offset)：接續終點重複曲線形狀，向上或向下延伸

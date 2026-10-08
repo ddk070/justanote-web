@@ -381,3 +381,8 @@ search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方
 
 ### 2026-10-07_ 週三
 新增Substance 3D Painter 外掛使用、Graph Editor、修改建立專案
+
+***
+
+### 2026-10-08_ 週四
+修復Graph Editor、importreference圖連結、新增Animation Layers
