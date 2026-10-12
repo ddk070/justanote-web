@@ -386,3 +386,8 @@ search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方
 
 ### 2026-10-08_ 週四
 修復Graph Editor、importreference圖連結、新增Animation Layers
+
+***
+
+### 2026-10-12_ 週一
+新增Trax Editor、修改大綱視窗
