@@ -14,6 +14,10 @@ tags:
 - 可用於調整音頻
 - 複製並重複使用動畫片段
 
+> 現在可使用[Time Editor](/blog/time-editor/)作為替代。<br>
+> Time Editor比Trax Editor界面更像影片編輯器。
+
+
 ***
 
 # Trax Editor
@@ -63,6 +67,8 @@ tags:
 
 
 # 匯入音頻
+- `File` > `Import Audio`
+
 官方僅支援這兩種音檔格式：
 1. WAV (.wav)
 2. 音频交换文件格式（.aif、.aiff）
