@@ -92,11 +92,6 @@ tags:
 5. 恆定(Constant)：開頭與結尾數值保持0，無限延伸（預設）
 
 
-# 在密集的曲線上選擇關鍵幀
-1. `Select` > `Prefer Selected Curves`
-2. 選取線 > `左鍵`移動關鍵幀
-
-
 # Tangent 類型
 - 點擊key會出現的翹翹板就是Tangent
 
@@ -119,7 +114,16 @@ tags:
 用於打斷，可自由調整兩邊的角度。
 
 
+
+
+
+
 ***
+
+# 在密集的曲線上選擇關鍵幀
+1. `Select` > `Prefer Selected Curves`
+2. 選取線 > `左鍵`移動關鍵幀
+
 
 # 參考資料
 * [Graph Editor_2024](https://help.autodesk.com/view/MAYAUL/2024/ENU/?guid=GUID-6D38EAEA-6032-471E-BD0E-54A74D4443C0)

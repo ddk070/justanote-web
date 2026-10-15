@@ -6,6 +6,7 @@ outline: 'Animation'
 tags:
   - maya
   - Animation
+  - playblast
   - 動畫工具
   - 腳本
   - 外掛

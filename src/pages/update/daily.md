@@ -396,3 +396,8 @@ search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方
 
 ### 2026-10-14_週三
 新增Time Editor、修改Trax Editor、免費材質球網站
+
+***
+
+### 2026-10-15_週四
+新增Camera Sequencer、修改playblast、Dope Sheet（攝影表）、Graph Editor、DuBlast
