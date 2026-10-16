@@ -401,3 +401,8 @@ search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方
 
 ### 2026-10-15_週四
 新增Camera Sequencer、修改playblast、Dope Sheet（攝影表）、Graph Editor、DuBlast
+
+***
+
+### 2026-10-16_ 週五
+新增模型攝影機設定、修改Camera Sequencer
