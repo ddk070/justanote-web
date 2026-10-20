@@ -406,3 +406,13 @@ search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方
 
 ### 2026-10-16_ 週五
 新增模型攝影機設定、修改Camera Sequencer
+
+***
+
+### 2026-10-19_週一
+修改模型攝影機設定
+
+***
+
+### 2026-10-20_週二
+修改模型攝影機設定、Graph Editor、Time Editor、Trax Editor

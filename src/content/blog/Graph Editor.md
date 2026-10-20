@@ -114,16 +114,23 @@ tags:
 用於打斷，可自由調整兩邊的角度。
 
 
+# Buffer Curve 緩衝曲線
+**用於查看與上一次的線條有何不同：**<br>
+`Curves` > `Buffer Curve` > `Snapshot`<br>
+白線和橘線之間有向下指標的圖示
+
+**用於在兩條線之間切換編輯：**<br>
+`Curves` > `Swap Buffer Curve`<br>
+白線與橘線交換的圖示
 
 
 
-
-***
 
 # 在密集的曲線上選擇關鍵幀
 1. `Select` > `Prefer Selected Curves`
 2. 選取線 > `左鍵`移動關鍵幀
 
+***
 
 # 參考資料
 * [Graph Editor_2024](https://help.autodesk.com/view/MAYAUL/2024/ENU/?guid=GUID-6D38EAEA-6032-471E-BD0E-54A74D4443C0)
