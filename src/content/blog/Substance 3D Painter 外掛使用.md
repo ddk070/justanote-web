@@ -12,6 +12,7 @@ tags:
 # 用途
 - 在maya快速套Substance 3D Painter材質
 
+> 此為內建外掛
 
 ***
 

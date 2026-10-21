@@ -416,3 +416,8 @@ search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方
 
 ### 2026-10-20_週二
 修改模型攝影機設定、Graph Editor、Time Editor、Trax Editor
+
+***
+
+### 2026-10-21_週三
+新增付費動畫外掛、IK FK matching script、修改Substance 3D Painter 外掛使用
