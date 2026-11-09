@@ -9,6 +9,7 @@ tags:
     - import
     - reference
     - 匯入方式
+    - 功能查閱
 ---
 
 # MAYA 的匯入方式

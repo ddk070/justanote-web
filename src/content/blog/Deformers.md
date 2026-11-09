@@ -6,6 +6,7 @@ outline: 'Rigging'
 tags:
   - maya
   - Rigging
+  - 步驟教學
 ---
 
 

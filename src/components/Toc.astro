@@ -37,7 +37,8 @@ const { headings = [] } = Astro.props;
   .toc {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     margin-top: 1rem;
-   
+    
+
   }
 
   .toc ul {
@@ -71,13 +72,16 @@ const { headings = [] } = Astro.props;
     color: #2563eb; /* 藍 600 */
     font-weight: 600;
   }
+
   @media (min-width: 1024px) {
     .toc-link {
     font-size: 1rem;
   }
+  
   html {
     scroll-padding-top: 100px;
     scroll-behavior: smooth; /* 順便加上平滑滾動 */
+    
   }
   }
 </style>

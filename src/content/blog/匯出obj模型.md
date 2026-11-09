@@ -7,6 +7,7 @@ tags:
     - maya
     - Model
     - obj
+    - 步驟教學
 ---
 
 # 開啟輸出obj外掛

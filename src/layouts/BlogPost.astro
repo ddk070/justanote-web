@@ -131,6 +131,9 @@ const { title, description, pubDate, updatedDate, heroImage } = post.data;
 		background-color: #cfdfe4; 
 		padding: 2rem ;
 		border-radius: 1rem;
+		position: sticky;
+		top: 80px;
+		height: fit-content;
 	}
 	/* 讓 details / summary 看起來像個卡片 */
 	.nav-card {
@@ -301,6 +304,10 @@ const { title, description, pubDate, updatedDate, heroImage } = post.data;
 		.nav-card, .sticky-card {
 		position: sticky;
 		top: 7rem;
+		max-height: calc(100vh - 100px);
+		overflow-y: auto;
+		scrollbar-width: thin;
+		scrollbar-color: #948f8f transparent;
 		}
 
 		.center-content{

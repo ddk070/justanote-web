@@ -421,3 +421,8 @@ search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方
 
 ### 2026-10-21_週三
 新增付費動畫外掛、IK FK matching script、修改Substance 3D Painter 外掛使用
+
+***
+
+### 2026-11-09_週一
+新增綁骨前注意事項，步驟教學、功能查閱、學習資源TAG。新增大綱與TAG功能滾動。
