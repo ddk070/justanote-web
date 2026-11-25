@@ -426,3 +426,9 @@ search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方
 
 ### 2026-11-09_週一
 新增綁骨前注意事項，步驟教學、功能查閱、學習資源TAG。新增大綱與TAG功能滾動。
+
+***
+
+### 2026-11-25_週三
+新增Maya Workflow Kit、修改maya 跨 blender 生存設定。<br>
+更改依據使用軟體給與文章不同顏色。

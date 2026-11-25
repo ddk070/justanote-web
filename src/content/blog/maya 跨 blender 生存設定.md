@@ -4,7 +4,7 @@ description: 'maya跨blender生存設定'
 pubDate: '2026/09/15'
 outline: '基礎'
 tags:
-  - maya
+  - blender
   - 基礎
   - 快捷鍵
   - 步驟教學

@@ -1,0 +1,34 @@
+---
+const { tags = [] } = Astro.props;
+
+const articleClass = tags.includes("maya")
+  ? "article-maya"
+  : tags.includes("blender")
+  ? "article-blender"
+  : "article-default";
+---
+
+<article class={`article-card ${articleClass}`}>
+  <slot />
+</article>
+
+<style>
+  .article-card {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: inherit;
+    overflow: hidden;
+  }
+
+  .article-maya {
+    background: #dceaff;
+  }
+
+  .article-blender {
+    background: #ffe0cc;
+  }
+
+  .article-default {
+    background: #e6ecf5;
+  }
+</style>
