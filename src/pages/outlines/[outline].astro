@@ -3,6 +3,7 @@ import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
+import ColorTag from '../../components/ColorTag.astro';
 
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
@@ -14,14 +15,18 @@ export async function getStaticPaths() {
   const uniqueOutlines = [...new Set(allposts.map((post) => post.data.outline).flat())].filter(Boolean);
   
   return uniqueOutlines.map((currentOutline) => {
-    const filteredPosts = allposts.filter((post) => {
+    const filteredPosts = allposts
+    .filter((post) => {
       if (!post.data.outline) return false;
       
       if (Array.isArray(post.data.outline)) {
         return post.data.outline.includes(currentOutline);
       }
       return post.data.outline === currentOutline;
-    });
+    })
+    .sort((a, b) =>
+        new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+      );
 
     return {
       params: { outline: currentOutline }, 
@@ -50,10 +55,12 @@ const { posts } = Astro.props;
     <ul class="post-list">
       {posts.map((post) => (
         <li class="card-item">
+          <ColorTag tags={post.data.tags}>
           <a href={`/blog/${post.id}`} class="post-link card-content">
             <span class="post-title"> {post.data.title}</span>
            <span class="count-info"> <FormattedDate date={post.data.pubDate} /></span>
           </a>
+          </ColorTag>
         </li>
       ))}
     </ul>

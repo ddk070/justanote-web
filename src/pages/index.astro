@@ -5,6 +5,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import Tags from '../components/Tags.astro';
 import Search from '../components/Search.astro';
+import ColorTag from '../components/ColorTag.astro';
 
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
@@ -137,16 +138,15 @@ const latestPosts = allPosts
 				grid-template-columns: 1fr;
 				gap: 15px;
 				margin: 1.5rem 0;
+				border-radius: 10px;
 			}
 
 			.post-card {
 				display: block;
 				padding: 1.25rem;
-				border: 1px solid #dae0ec;
 				border-radius: 10px;
 				text-decoration: none;
 				color: inherit;
-				background-color: #d5e8ec;
 				transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 			}
 
@@ -270,15 +270,16 @@ const latestPosts = allPosts
 				<h1>最新筆記</h1>
 				<div class="posts-grid">
 				{latestPosts.map((post) => (
+					<ColorTag tags={post.data.tags}>
 					<a href={`/blog/${post.id}`} class="post-card">
-					<div class="card-content">
-						<h3>{post.data.title}</h3>
-						<div class="date">
-							<FormattedDate date={post.data.pubDate} />
+						<div class="card-content">
+							<h3>{post.data.title}</h3>
+							<div class="date">
+								<FormattedDate date={post.data.pubDate} />
+							</div>
 						</div>
-
-					</div>
 					</a>
+				</ColorTag>
 				))}
 				</div>
 				<div  class="mayablog">

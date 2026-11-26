@@ -3,6 +3,8 @@ import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
+import ColorTag from '../../components/ColorTag.astro';
+
 
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 import { getCollection } from 'astro:content';
@@ -13,7 +15,11 @@ export async function getStaticPaths() {
   const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())].filter(Boolean);
 
   return uniqueTags.map((tag) => {
-    const filteredPosts = allPosts.filter((post) => post.data.tags && post.data.tags.includes(tag));
+     const filteredPosts = allPosts
+      .filter((post) => post.data.tags && post.data.tags.includes(tag))
+      .sort((a, b) =>
+        new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+      );
     
     return {
       params: { tag: tag },            
@@ -21,6 +27,8 @@ export async function getStaticPaths() {
     }; 
   });
 }
+
+
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
@@ -43,10 +51,14 @@ const { posts } = Astro.props;
     <ul class="post-list">
       {posts.map((post) => (
         <li class="card-item">
-          <a href={`/blog/${post.id}`} class="post-link card-content">
-            <span class="post-title">{post.data.title}</span>
-            <span class="post-date"><FormattedDate date={post.data.pubDate} /></span>
-          </a>
+          <ColorTag tags={post.data.tags}>
+            <a href={`/blog/${post.id}`} class="post-link card-content">
+              <span class="post-title">{post.data.title}</span>
+              <span class="post-date">
+                <FormattedDate date={post.data.pubDate} />
+              </span>
+            </a>
+          </ColorTag>
         </li>
       ))}
     </ul>

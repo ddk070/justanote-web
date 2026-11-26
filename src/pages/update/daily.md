@@ -432,3 +432,8 @@ search-console add sitemap，修改權重筆記、新增Bonus tools、maya官方
 ### 2026-11-25_週三
 新增Maya Workflow Kit、修改maya 跨 blender 生存設定。<br>
 更改依據使用軟體給與文章不同顏色。
+
+***
+
+### 2026-11-26_週四
+修改Maya Workflow Kit、更改依據使用軟體給與文章不同顏色功能、文章數量計算。

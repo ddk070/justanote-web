@@ -1,8 +1,8 @@
 ---
-title: `Maya Workflow Kit`
-description: `blender Maya Workflow Kit`
-pubDate: `2026/11/25`
-outline: `Model`
+title: 'Maya Workflow Kit'
+description: 'blender Maya Workflow Kit'
+pubDate: '2026/11/25'
+outline: 'Model'
 tags:
   - blender
   - Model

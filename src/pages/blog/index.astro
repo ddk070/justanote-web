@@ -6,7 +6,7 @@ import Footer from '../../components/Footer.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
-import ColorTag from '../../components/ColorTag.astro'
+import ColorTag from '../../components/ColorTag.astro';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -65,7 +65,7 @@ posts.forEach(post => {
 			}
 
 			ul li:hover .article-maya {
-				background: #c8dcfa;
+				background: #9db0cc;
 			}
 
 			ul li * {
@@ -160,7 +160,7 @@ posts.forEach(post => {
 		<main>
 			<section>
 				<h1>MAYA 筆記</h1>
-				<p class="count">目前筆記數量 ： <span> {tagsCount["maya"] ?? 0}</span></p>
+				<p class="count">目前筆記數量 ： <span> {(tagsCount["maya"] ?? 0) + (tagsCount["blender"] ?? 0)}</span></p>
 				<hr>
 				<ul>
 				{
